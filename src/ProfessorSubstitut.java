@@ -5,8 +5,8 @@ public class ProfessorSubstitut extends Professor{
     public Date dataFi;
 
     //constructor
-    public ProfessorSubstitut(String dni, String nom, int sou, Date datainici, Date dataFi) {
-        super(dni, nom, sou);
+    public ProfessorSubstitut(String nom, String dni, int sou, Date datainici, Date dataFi) {
+        super(nom, dni, sou);
         this.datainici = datainici;
         this.dataFi = dataFi;
     }
@@ -16,7 +16,9 @@ public class ProfessorSubstitut extends Professor{
        this.dataFi= dataFi;
     }
 
-
+    public String getobtenirDades(){
+        return super.getObtenirDades()+ "ProfessorSubstitut{" + ", datainici:" + datainici + ", datafi:" + dataFi + "}";
+    }
 
 
 

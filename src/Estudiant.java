@@ -1,10 +1,13 @@
+import java.sql.Array;
+import java.util.ArrayList;
+
 public class Estudiant extends Persona {
 
     private int nota;
 
     //constructor
-    public Estudiant(String dni, String nom, int nota) {
-        super(dni,nom);
+    public Estudiant(String nom, String dni, int nota) {
+        super(nom,dni);
         this.nota = nota;
     }
 
@@ -12,7 +15,7 @@ public class Estudiant extends Persona {
         this.nota = nota;
     }
 
-    public void obtenirDades(){
-
+    public String getObtenirDades(){
+        return super.getObtenirDades() +"Estudiant{" + "nota:" + nota + "}";
     }
 }
