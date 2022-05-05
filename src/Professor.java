@@ -10,9 +10,9 @@ public class Professor extends Persona {
 
     public void canviarSou(int nouSou)throws Exception {
 
-        if (this.sou < 0 || this.sou > 3000) {
+        if (this.sou < 0 || nouSou > 3000) {
             throw new Exception("no puedes cobrar tanto, no eres un ministro");
-        } else {
+        } else{
             this.sou = nouSou;
         }
 

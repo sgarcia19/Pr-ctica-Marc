@@ -16,19 +16,17 @@ public class Persona {
     }
 
     public void setDni(String dni) throws Exception {
-        // System.out.println(this.dni);
-
-        if (this.dni != null) {
-            // System.out.println("no puedes poner otro");
-            throw new Exception("no puedes poner otro");
-        } else {
+        if (this.dni == null) { // si la pesona no te dni....
+            // assignem el dni que estem passant
             this.dni = dni;
+        } else { // si la persona SÍ té dni
+            // no hem de deixar que canvii i ha de sortir una excepcio
+            throw new Exception("No es pot canviar el dni");
         }
-        throw new Exception();
     }
 
     public void canviarNom(String nom) throws Exception {
-        if (this.nom ==null){
+        if (this.nom != null){
             throw new Exception("No tenim ni el DNI ni sabem el teu NOM");
         } else{
             this.nom = nom;
